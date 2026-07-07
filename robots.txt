@@ -1,0 +1,5 @@
+# robots.txt for Rajesh Sahu Portfolio
+User-agent: *
+Allow: /
+
+Sitemap: https://rajeshsahu.me/sitemap.xml

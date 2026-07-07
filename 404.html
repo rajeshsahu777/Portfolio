@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page not found. Back to Rajesh Sahu's Portfolio.">
+  <meta name="theme-color" content="#09090b">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+  <title>404 - Page Not Found | Rajesh Rushikesh Sahu</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <style>
+    .error-page-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .error-code {
+      font-size: 8rem;
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-emerald) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 24px;
+      font-family: var(--font-display);
+      animation: code-pulse 3s infinite alternate ease-in-out;
+    }
+    
+    @keyframes code-pulse {
+      0% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(var(--accent-cyan-rgb), 0.15)); }
+      100% { transform: scale(1.05); filter: drop-shadow(0 0 25px rgba(var(--accent-cyan-rgb), 0.35)); }
+    }
+    
+    .error-title {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    
+    .error-desc {
+      font-size: 1.1rem;
+      max-width: 480px;
+      margin-bottom: 40px;
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background spots -->
+  <div class="glow-spot spot-1" aria-hidden="true"></div>
+  <div class="glow-spot spot-2" aria-hidden="true"></div>
+
+  <main class="error-page-container">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Signal Lost</h1>
+    <p class="error-desc">
+      The edge node you are trying to ping does not exist or has been relocated in the network architecture.
+    </p>
+    <a href="index.html" class="btn btn-primary">
+      <span>Return to Home Node</span>
+      <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </a>
+  </main>
+
+  <!-- Accessibility and design hooks script -->
+  <script>
+    // Simple custom cursor support if needed, but not required for full features
+    window.addEventListener('DOMContentLoaded', () => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReducedMotion) {
+        document.querySelectorAll('.glow-spot').forEach(el => el.style.display = 'none');
+      }
+    });
+  </script>
+</body>
+</html>
